@@ -9,6 +9,7 @@ export default NextAuth({
       type: 'oauth',
       version: '2.0',
       scope: 'default',
+      protection: ['state', 'pkce'],
       params: { grant_type: 'authorization_code' },
       accessTokenUrl: `${process.env.NEXT_PUBLIC_VROID_HUB_URL}/oauth/token`,
       requestTokenUrl: `${process.env.NEXT_PUBLIC_VROID_HUB_URL}/oauth/token`,
